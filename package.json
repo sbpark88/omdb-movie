@@ -1,0 +1,17 @@
+{
+  "name": "omdb-movie",
+  "version": "1.0.0",
+  "description": "<!-- https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수정해 사용 -->",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "prettier": "^3.2.5"
+  }
+}
