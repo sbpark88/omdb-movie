@@ -1,4 +1,4 @@
-import { Component } from "../core/BaseComponent";
+import { Component } from "../core/MyReact";
 
 export default class FruitItem extends Component {
   constructor({ props }) {

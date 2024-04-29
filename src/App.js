@@ -1,4 +1,5 @@
-import { Component } from "./core/BaseComponent";
+import { Component } from "./core/MyReact";
+import Header from "./components/Header";
 
 export default class App extends Component {
   constructor() {
@@ -6,6 +7,7 @@ export default class App extends Component {
   }
 
   render() {
-    this.el.append();
+    const routerView = document.createElement("router-view");
+    this.el.append(new Header(), routerView);
   }
 }

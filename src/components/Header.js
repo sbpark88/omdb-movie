@@ -1,4 +1,4 @@
-import { Component } from "../core/BaseComponent";
+import { Component } from "../core/MyReact";
 
 export default class Header extends Component {
   constructor() {
