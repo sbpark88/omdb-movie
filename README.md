@@ -13,7 +13,7 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
   <h3 align="center">Starbucks</h3>
 
   <p align="center">
-    프로젝트 설명을 1줄로 간단하게 작성
+    영화 정보 검색 페이지
     <!-- docs 가 필요시 주석을 해제하고 사용
     <br />
     <a href="https://github.com/othneildrew/project-repository"><strong>Explore the docs »</strong></a>
@@ -65,11 +65,11 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
 
 [![Product Name Screen Shot][product-screenshot]][product-deploy-url]
 
-프로젝트에 대한 상세한 설명을 작성한다. 보기 쉽게 설명과 함께 목록화 해서 작성하는 것을 권장.
+Vanilla TS 로 작성하는 영화 정보 검색 페이지
 
 특징:
-- Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-- Consequuntur iure mollitia natus nemo recusandae voluptates. 
+- Vanilla JS to Vanilla TS 변환
+- 컴포넌트 기반 작성 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,7 +83,7 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
 
 ![HTML5][HTML5 Icon]
 ![SCSS][SCSS Icon]
-![JavaScript][JavaScript Icon]
+![TypeScript][TypeScript Icon]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,7 @@ brew install npm
 
 1. Clone the repo
    ```shell
-   git clone https://github.com/sbpark88/project-repository.git
+   git clone https://github.com/sbpark88/omdb-movie.git
    ```
 2. Install NPM packages
    ```shell
@@ -141,11 +141,28 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] 로드맵 1
-- [ ] 로드맵 2
-- [ ] 로드맵 3
-    - [ ] 로드맵 3-1
-    - [ ] 로드맵 3-2
+- [ ] 컴포넌트 선언
+    - [ ] Headline
+    - [ ] Search
+    - [ ] MovieList
+    - [ ] MovieItem
+    - [ ] Header
+    - [ ] Footer
+- [ ] 해쉬 라우터
+    - [ ] 기본 라우터 구성
+    - [ ] 뒤로가기 히스토리 기억 후 복구
+- [ ] 상태 관리(스토어)
+    - [ ] 영화 목록 상태 관리
+    - [ ] 영화 상세 정보 상태 관리
+- [ ] UI
+    - [ ] 스켈레톤 로딩
+    - [ ] 반응형(미디어쿼리)
+- [ ] Deployment
+    - [ ] API Key 보안 이슈
+    - [ ] Serverless Functions
+    - [ ] 환경변수 구성
+- [ ] TypeScript 전환
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
