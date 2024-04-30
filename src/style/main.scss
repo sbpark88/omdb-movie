@@ -1,0 +1,28 @@
+@import "reset-css";
+@import "variables";
+
+body {
+  background-color: $color-black;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  color: $color-white;
+}
+
+.oswald-medium {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
