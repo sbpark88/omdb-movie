@@ -2,13 +2,27 @@
  * Component
  */
 export class Component {
-  constructor({ tagName = "div", state = {}, props = {} }) {
+  /**
+   * @type {HTMLElement}
+   */
+  el;
+
+  /**
+   * Component constructor
+   *
+   * @constructor
+   * @param {object} [payload]
+   * @param {string} [payload.tagName]
+   * @param {object} [payload.state] - State of self.
+   * @param {object} [payload.props] - Data is passed from parent.
+   */
+  constructor(payload = {}) {
+    const { tagName = "div", state = {}, props = {} } = payload;
     this.el = document.createElement(tagName);
     this.state = state;
     this.props = props;
 
     this.render();
-    return this.el;
   }
   render() {}
 }
@@ -48,7 +62,7 @@ function routeRender(routes) {
     new RegExp(`${route.path}/?$`).test(hash),
   );
   routerView.innerHTML = "";
-  routerView.append(new currentRoute.component());
+  routerView.append(new currentRoute.component().el);
 
   window.scrollTo(0, 0);
 }

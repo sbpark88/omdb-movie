@@ -1,6 +1,12 @@
 import { Component } from "../core/MyReact";
 
 export default class FruitItem extends Component {
+  /**
+   * @constructor
+   * @param {object} props
+   * @param {string} props.name
+   * @param {number} props.price
+   */
   constructor({ props }) {
     const tagName = "li";
     super({ tagName, props });
