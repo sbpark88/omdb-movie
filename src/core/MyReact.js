@@ -1,5 +1,5 @@
 /**
- * Component
+ * Base Component
  */
 export class Component {
   /**
@@ -65,4 +65,31 @@ function routeRender(routes) {
   routerView.append(new currentRoute.component().el);
 
   window.scrollTo(0, 0);
+}
+
+export class Store {
+  /**
+   * @constructor
+   * @param {object} state
+   */
+  constructor(state) {
+    this.state = {};
+    this.observers = {};
+    for (const key in state) {
+      Object.defineProperty(this.state, key, {
+        get: () => state[key],
+        set: (newValue) => {
+          if (state[key] === newValue) return;
+          state[key] = newValue;
+          this.observers[key].forEach((callback) => callback(newValue));
+        },
+      });
+    }
+  }
+
+  subscribe(key, callback) {
+    Array.isArray(this.observers[key])
+      ? this.observers[key].push(callback)
+      : (this.observers[key] = [callback]);
+  }
 }
