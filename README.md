@@ -10,7 +10,7 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Starbucks</h3>
+  <h3 align="center">Movie Search</h3>
 
   <p align="center">
     영화 정보 검색 페이지
@@ -23,9 +23,9 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
     <!-- 아래 경로를 [product-deploy-url] 로 교체하고 문서 내 모든 `project-repository`를 수정한다 -->
     <a href="javascript:void(0)">View Demo</a>
     ·
-    <a href="https://github.com/sbpark88/project-repository/projects">Project</a>
+    <a href="https://github.com/sbpark88/omdb-movie/projects">Project</a>
     ·
-    <a href="https://github.com/sbpark88/project-repository/issues">Issue</a>
+    <a href="https://github.com/sbpark88/omdb-movie/issues">Issue</a>
   </p>
 </div>
 
