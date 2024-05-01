@@ -1,0 +1,20 @@
+@import "../style/variables";
+
+.headline {
+  margin-bottom: 40px;
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 40px;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  p {
+    color: $color-white-30;
+  }
+}

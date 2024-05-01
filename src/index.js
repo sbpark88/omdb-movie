@@ -1,8 +1,8 @@
 "use strict";
 
-import("../src/style/main.scss");
 import App from "./App";
 import router from "./routes";
+import "../src/style/main.scss";
 
 const root = document.querySelector("#root");
 root.append(new App().el);
