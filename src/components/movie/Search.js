@@ -9,6 +9,7 @@ export default class Search extends Component {
     const input = new InputText({
       state: { placeholder: "Enter the movie title to search!" },
     }).el;
+    movieStore.state.searchText && (input.value = movieStore.state.searchText);
     const btn = new Button({
       state: {
         textContent: "search!",
