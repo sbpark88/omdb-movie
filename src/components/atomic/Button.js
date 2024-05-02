@@ -9,17 +9,16 @@ export default class Button extends Component {
    * @constructor
    * @param {object} payload
    * @param {string} payload.state.textContent
-   * @param {string} [payload.state.modifier] - undefined, primary
+   * @param {string[]} [payload.state.classes]
    */
   constructor(payload) {
-    const { state = { textContent: "", modifier: undefined } } = payload;
+    const { state = { textContent: "", classes: null } } = payload;
     const tagName = "button";
     super({ tagName, state });
   }
   render() {
     this.el.classList.add("btn");
-    this.state?.modifier &&
-      this.el.classList.add(`btn--${this.state.modifier}`);
+    this.state?.classes && this.el.classList.add(...this.state.classes);
     this.el.textContent = this.state.textContent;
   }
 }

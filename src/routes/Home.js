@@ -24,7 +24,9 @@ export default class Home extends Component {
     this.el.append(btnMore);
 
     btnMore.addEventListener("click", async () => {
+      btnMore.classList.add("hide");
       await searchMovies(movieStore.state.page + 1);
+      toggleBtnMore();
     });
     movieStore.subscribe("isRemain", toggleBtnMore);
     movieStore.subscribe("loading", toggleLoader);

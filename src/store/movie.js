@@ -10,21 +10,46 @@ const store = new Store({
   movies: [],
   isRemain: false,
   loading: false,
+  message: "Search for the movie title!",
 });
 
 export default store;
 export const searchMovies = async (page) => {
   store.state.loading = true;
   store.state.page = page;
-  if (page === 1) store.state.movies = [];
+  if (page === 1) resetStore();
   const queries = {
     apiKey: process.env.OMDB_API_KEY,
     s: store.state.searchText,
     page: page,
   };
 
-  const { Search, totalResults } = await $fetch.GET($K.API_URL, queries);
-  store.state.movies = [...store.state.movies, ...Search];
-  store.state.isRemain = totalResults > MOVIE_COUNT_PER_PAGE * page;
+  try {
+    const { Search, totalResults, Response, Error } = await $fetch.GET(
+      $K.API_URL,
+      queries,
+    );
+    const isMovieFound = Response === "True";
+    isMovieFound
+      ? updateMovies(Search, totalResults, page)
+      : updateMessage(Error);
+  } catch (error) {
+    console.error("searchMovies error: ", error);
+  }
   store.state.loading = false;
 };
+
+function resetStore() {
+  store.state.movies = [];
+  store.state.message = "";
+}
+
+function updateMovies(search, totalResults, page) {
+  store.state.movies = [...store.state.movies, ...search];
+  store.state.isRemain = totalResults > MOVIE_COUNT_PER_PAGE * page;
+}
+
+function updateMessage(message) {
+  store.state.message = message;
+  store.state.isRemain = false;
+}

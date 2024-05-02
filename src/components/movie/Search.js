@@ -12,7 +12,7 @@ export default class Search extends Component {
     const btn = new Button({
       state: {
         textContent: "search!",
-        modifier: "primary",
+        classes: ["btn--primary"],
       },
     }).el;
     this.el.append(input, btn);
