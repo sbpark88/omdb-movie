@@ -1,9 +1,10 @@
+@use "sass:math";
 @import "../../style/variables";
 
 .movies .movie {
   $width: 200px;
   width: $width;
-  height: calc($width * 3 / 2);
+  height: math.div($width * 3, 2);
   border-radius: 4px;
   background-color: $color-black;
   background-size: cover;

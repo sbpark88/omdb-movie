@@ -1,0 +1,44 @@
+@use "sass:math";
+@import "../style/variables";
+
+.the-movie {
+  color: $color-white-50;
+  display: flex;
+  gap: 70px;
+}
+
+.the-movie .poster {
+  flex-shrink: 0;
+  $width: 500px;
+  width: $width;
+  height: math.div($width * 3, 2);
+  border-radius: 10px;
+  background-size: cover;
+  background-color: $color-area;
+}
+
+.the-movie .specs {
+  flex-grow: 1;
+}
+
+.the-movie .title {
+  font-size: 70px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  color: $color-white;
+  margin-bottom: 30px;
+}
+
+.the-movie .labels {
+  color: $color-primary;
+  margin-bottom: 20px;
+}
+
+.the-movie .plot {
+}
+.the-movie h3 {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  color: $color-white;
+  margin: 24px 0 6px;
+}

@@ -5,7 +5,7 @@ import MovieList from "../components/movie/MovieList";
 import Button from "../components/atomic/Button";
 import Loader from "../components/Loader";
 import movieStore, { searchMovies } from "../store/movie";
-import "../style/routes/Home.scss";
+import "./Home.scss";
 export default class Home extends Component {
   async render() {
     const headline = new Headline().el;

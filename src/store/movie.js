@@ -8,6 +8,7 @@ const store = new Store({
   searchText: "",
   page: 0,
   movies: [],
+  movieDetails: {},
   isRemain: false,
   loading: false,
   message: "Search for the movie title!",
@@ -26,7 +27,7 @@ export const searchMovies = async (page) => {
 
   try {
     const { Search, totalResults, Response, Error } = await $fetch.GET(
-      $K.API_URL,
+      $K.OMDB_API_URL,
       queries,
     );
     const isMovieFound = Response === "True";
@@ -53,3 +54,16 @@ function updateMessage(message) {
   store.state.message = message;
   store.state.isRemain = false;
 }
+
+export const getMovieDetails = async (imdbId) => {
+  try {
+    const queries = {
+      apiKey: process.env.OMDB_API_KEY,
+      i: imdbId,
+      plot: "full",
+    };
+    store.state.movieDetails = await $fetch.GET($K.OMDB_API_URL, queries);
+  } catch (error) {
+    console.error("getMovieDetails error: ", error);
+  }
+};

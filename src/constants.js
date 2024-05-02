@@ -1,3 +1,3 @@
 export default {
-  API_URL: "https://www.omdbapi.com/",
+  OMDB_API_URL: "https://www.omdbapi.com/",
 };
