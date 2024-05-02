@@ -1,0 +1,39 @@
+@import "../../style/variables";
+
+.movies .movie {
+  $width: 200px;
+  width: $width;
+  height: calc($width * 3 / 2);
+  border-radius: 4px;
+  background-color: $color-black;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 6px solid $color-primary;
+  }
+}
+
+.movies .movie .info {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(14, 17, 27, 0.3);
+  backdrop-filter: blur(10px);
+
+  .year {
+    color: $color-primary;
+  }
+  .title {
+    color: $color-white;
+  }
+}
