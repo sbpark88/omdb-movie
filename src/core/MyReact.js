@@ -83,7 +83,7 @@ export class Store {
         set: (newValue) => {
           if (state[key] === newValue) return;
           state[key] = newValue;
-          this.observers[key].forEach((callback) => callback(newValue));
+          this.observers[key]?.forEach((callback) => callback(newValue));
         },
       });
     }
