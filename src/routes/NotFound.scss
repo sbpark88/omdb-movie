@@ -1,0 +1,21 @@
+@import "../style/variables";
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 20%;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7);
+  }
+}
