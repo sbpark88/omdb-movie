@@ -1,4 +1,5 @@
 import { Component } from "../../core/MyReact";
+import aboutStore from "../../store/about";
 import "./Footer.scss";
 export default class Footer extends Component {
   constructor() {
@@ -7,14 +8,16 @@ export default class Footer extends Component {
   }
 
   render() {
+    const { github, repository } = aboutStore.state;
+
     this.el.innerHTML = `
       <div>
-        <a href="https://github.com/sbpark88/omdb-movie">
+        <a href="${repository}">
           GitHub Repository
         </a>
       </div>
       <div>
-        <a href="https://sbpark88.github.io">
+        <a href="${github}">
           ${new Date().getFullYear()}
           Hogwarts Blog
         </a>
