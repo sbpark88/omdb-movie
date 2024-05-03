@@ -1,4 +1,4 @@
-import { Component } from "../core/MyReact";
+import { Component } from "../../../core/MyReact";
 import "./Headline.scss";
 
 export default class Headline extends Component {

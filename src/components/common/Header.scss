@@ -1,0 +1,63 @@
+@import "../../style/variables";
+
+header {
+  padding: 20px 40px;
+  background-color: rgba(14, 17, 27, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+header .logo {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  color: $color-white-50;
+  text-decoration: none;
+
+  span {
+    color: $color-primary;
+  }
+}
+
+header nav ul {
+  display: flex;
+  gap: 14px;
+
+  li a {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-white-50;
+    text-decoration: none;
+
+    &.active {
+      color: $color-primary;
+    }
+  }
+}
+
+header .user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $color-area;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  bottom: 0;
+  margin: auto;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+    outline: 2px solid $color-primary;
+  }
+}

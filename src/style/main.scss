@@ -8,6 +8,12 @@ body {
   color: $color-white;
 }
 
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
 .oswald-medium {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
