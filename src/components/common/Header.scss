@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 header {
   padding: 20px 40px;
@@ -9,6 +10,10 @@ header {
   display: flex;
   align-items: flex-end;
   gap: 40px;
+
+  @include mobile {
+    padding: 14px 20px;
+  }
 }
 
 header .logo {
@@ -22,18 +27,24 @@ header .logo {
   }
 }
 
-header nav ul {
-  display: flex;
-  gap: 14px;
+header nav {
+  @include mobile {
+    display: none;
+  }
 
-  li a {
-    font-size: 14px;
-    font-weight: 700;
-    color: $color-white-50;
-    text-decoration: none;
+  ul {
+    display: flex;
+    gap: 14px;
 
-    &.active {
-      color: $color-primary;
+    li a {
+      font-size: 14px;
+      font-weight: 700;
+      color: $color-white-50;
+      text-decoration: none;
+
+      &.active {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -50,6 +61,10 @@ header .user {
   bottom: 0;
   margin: auto;
   transition: 0.3s;
+
+  @include mobile {
+    right: 20px;
+  }
 
   &:hover {
     transform: scale(1.2);

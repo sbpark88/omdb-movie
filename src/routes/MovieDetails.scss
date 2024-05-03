@@ -1,15 +1,25 @@
 @use "sass:math";
 @import "../style/variables";
+@import "../style/mixins";
 
 .the-movie {
   color: $color-white-50;
   display: flex;
   gap: 70px;
+
+  @include tablet {
+    gap: 30px;
+  }
 }
 
 .the-movie .poster {
   flex-shrink: 0;
   $width: 500px;
+
+  @include tablet {
+    $width: 300px;
+  }
+
   width: $width;
   height: math.div($width * 3, 2);
   border-radius: 10px;
@@ -51,4 +61,14 @@
   font-family: "Oswald", sans-serif;
   color: $color-white;
   margin: 24px 0 6px;
+}
+
+@media screen and (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
 }
