@@ -4,6 +4,16 @@ import movieStore, { getMovieDetails } from "../store/movie";
 import "./MovieDetails.scss";
 export default class MovieDetails extends Component {
   async render() {
+    this.el.classList.add("container", "the-movie");
+    this.el.innerHTML = `
+      <div class="poster skeleton"></div>
+      <div class="specs">
+        <div class="title skeleton"></div>
+        <div class="labels skeleton"></div>
+        <div class="plot skeleton"></div>
+      </div>
+    `;
+
     await getMovieDetails(history.state.id);
     const {
       Poster,
@@ -19,10 +29,9 @@ export default class MovieDetails extends Component {
       Genre,
     } = movieStore.state.movieDetails;
 
-    this.el.classList.add("container", "the-movie");
     this.el.innerHTML = `
-      <div class="poster" 
-           style="background-image: url(${Poster.replace("SX300", "SX700")})">           
+      <div class="poster"
+           style="background-image: url(${Poster.replace("SX300", "SX700")})">
       </div>
       <div class="specs">
         <div class="title">${Title}</div>

@@ -27,14 +27,24 @@
   line-height: 1;
   color: $color-white;
   margin-bottom: 30px;
+
+  &.skeleton {
+    height: 70px;
+  }
 }
 
 .the-movie .labels {
   color: $color-primary;
   margin-bottom: 20px;
+
+  &.skeleton {
+    height: 30px;
+  }
 }
 
-.the-movie .plot {
+.the-movie .plot.skeleton {
+  width: 80%;
+  height: 400px;
 }
 .the-movie h3 {
   font-size: 20px;

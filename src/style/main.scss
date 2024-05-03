@@ -26,3 +26,33 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+.skeleton {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $color-area;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  animation: skeleton-loader 2s linear infinite both;
+}
+
+@keyframes skeleton-loader {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
