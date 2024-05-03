@@ -1,8 +1,7 @@
 {
   "name": "omdb-movie",
   "version": "1.0.0",
-  "description": "<!-- https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수정해 사용 -->",
-  "main": "index.js",
+  "description": "OMDb API Vanilla JS/TS Component Development",
   "scripts": {
     "dev": "parcel ./index.html",
     "build": "parcel build ./index.html"
