@@ -23,7 +23,6 @@ const createOptions = ({ method, body }) => {
     credentials: "same-origin",
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      Cookie: document.cookie,
     },
     referrerPolicy: "no-referrer",
   };

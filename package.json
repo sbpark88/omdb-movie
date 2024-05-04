@@ -4,7 +4,8 @@
   "description": "OMDb API Vanilla JS/TS Component Development",
   "scripts": {
     "dev": "parcel ./index.html",
-    "build": "parcel build ./index.html"
+    "build": "parcel build ./index.html",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "vercel": "^34.1.8"
   },
   "dependencies": {
     "reset-css": "^5.0.2"
