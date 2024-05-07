@@ -21,7 +21,7 @@ https://github.com/othneildrew/Best-README-Template 를 기본으로 하여 수�
     <br />
     <br />
     <!-- 아래 경로를 [product-deploy-url] 로 교체하고 문서 내 모든 `project-repository`를 수정한다 -->
-    <a href="javascript:void(0)">View Demo</a>
+    <a href="https://omdb-movie-iota.vercel.app/#/">View Demo</a>
     ·
     <a href="https://github.com/sbpark88/omdb-movie/projects">Project</a>
     ·
@@ -141,26 +141,26 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] 컴포넌트 선언
-    - [ ] Headline
-    - [ ] Search
-    - [ ] MovieList
-    - [ ] MovieItem
-    - [ ] Header
-    - [ ] Footer
-- [ ] 해쉬 라우터
-    - [ ] 기본 라우터 구성
-    - [ ] 뒤로가기 히스토리 기억 후 복구
-- [ ] 상태 관리(스토어)
-    - [ ] 영화 목록 상태 관리
-    - [ ] 영화 상세 정보 상태 관리
-- [ ] UI
-    - [ ] 스켈레톤 로딩
-    - [ ] 반응형(미디어쿼리)
-- [ ] Deployment
-    - [ ] API Key 보안 이슈
-    - [ ] Serverless Functions
-    - [ ] 환경변수 구성
+- [X] 컴포넌트 선언
+    - [X] Headline
+    - [X] Search
+    - [X] MovieList
+    - [X] MovieItem
+    - [X] Header
+    - [X] Footer
+- [X] 해쉬 라우터
+    - [X] 기본 라우터 구성
+    - [X] 뒤로가기 히스토리 기억 후 복구
+- [X] 상태 관리(스토어)
+    - [X] 영화 목록 상태 관리
+    - [X] 영화 상세 정보 상태 관리
+- [X] UI
+    - [X] 스켈레톤 로딩
+    - [X] 반응형(미디어쿼리)
+- [X] Deployment
+    - [X] API Key 보안 이슈
+    - [X] Serverless Functions
+    - [X] 환경변수 구성
 - [ ] TypeScript 전환
 
 
@@ -200,7 +200,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- images 디렉토리의 `screenshot.png` 파일을 업데이트한다. 배포된 프로젝트 경로를 추가한다. -->
 [product-screenshot]:images/screenshot.png
-[product-deploy-url]:about:blank
+[product-deploy-url]:https://omdb-movie-iota.vercel.app/#/
 
 
 <!--
