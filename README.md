@@ -161,7 +161,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [X] API Key 보안 이슈
     - [X] Serverless Functions
     - [X] 환경변수 구성
-- [ ] TypeScript 전환
+- [X] TypeScript 전환
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
