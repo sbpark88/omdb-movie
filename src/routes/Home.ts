@@ -1,10 +1,10 @@
-import { Component } from "../core/MyReact";
-import Headline from "../components/sub-pages/home/Headline";
-import Search from "../components/movie/Search";
-import MovieList from "../components/movie/MovieList";
-import Button from "../components/atomic/Button";
-import Loader from "../components/common/Loader";
-import movieStore, { searchMovies } from "../store/movie";
+import { Component } from "@core/MyReact";
+import Headline from "@components/sub-pages/home/Headline";
+import Search from "@components/movie/Search";
+import MovieList from "@components/movie/MovieList";
+import Button from "@components/atomic/Button";
+import Loader from "@components/common/Loader";
+import movieStore, { searchMovies } from "@store/movie";
 import "./Home.scss";
 export default class Home extends Component {
   async render() {

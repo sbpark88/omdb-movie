@@ -1,6 +1,7 @@
-import { Component } from "../core/MyReact";
-import aboutStore from "../store/about";
+import { Component } from "@core/MyReact";
+import aboutStore from "@store/about";
 import "./About.scss";
+
 export default class About extends Component {
   render() {
     const { photo, name, email, github, blog } = aboutStore.state;

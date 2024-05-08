@@ -1,22 +1,23 @@
 /**
- * Create query string for fetch
+ * Convert object to url query string
  *
- * @param {object} queries
- * @return {string | null}
+ * @param {Record<string, string>} queries
+ * @return {string | undefined}
  */
-const createQueries = (queries) => {
+const createQueries = (queries: Record<string, string>): string | undefined => {
   const queryString = new URLSearchParams(queries).toString();
-  return queryString ? `?${queryString}` : null;
+  return queryString ? `?${queryString}` : undefined;
 };
+
+interface HttpOptions {
+  method: string;
+  body?: Record<string, unknown>;
+}
 
 /**
  * Create options for fetch
- *
- * @param {string} method
- * @param {object} [body]
- * @return {object} fetch options
  */
-const createOptions = ({ method, body }) => {
+const createOptions = ({ method, body }: HttpOptions) => {
   const options = {
     method: method,
     mode: "cors",
@@ -32,16 +33,20 @@ const createOptions = ({ method, body }) => {
   return options;
 };
 
+interface FetchParams {
+  url: string;
+  queryString?: string;
+  options?: object;
+}
+
 /**
  * Call fetch and return resolved data or throw exception
- *
- * @param {string} url
- * @param {string} [queryString]
- * @param {object} options
- * @return {Promise}
- * @private
  */
-const _fetch = async ({ url, queryString, options }) => {
+const _fetch = async ({
+  url,
+  queryString,
+  options,
+}: FetchParams): Promise<any> => {
   if (!url) return null;
   try {
     const response = await fetch(url + (queryString ?? ""), options);
@@ -60,41 +65,32 @@ const _fetch = async ({ url, queryString, options }) => {
 
 /**
  * Custom fetch
- *
- * @param {string} url
- * @param {object} [queries]
- * @param {object} options
- * @return {Promise} - return promise resolved data
- * @throws {HTTPError | Error}
  */
 export const $fetch = {
-  GET: async (url, queries) =>
+  GET: async (url: string, queries?: Record<string, unknown>) =>
     await _fetch({
       url,
-      queryString: createQueries(queries),
+      queryString: createQueries(queries as Record<string, string>),
       options: createOptions({ method: "GET" }),
     }),
-  POST: async (url, body) =>
+  POST: async (url: string, body?: Record<string, unknown>) =>
     await _fetch({ url, options: createOptions({ method: "POST", body }) }),
-  PUT: async (url, body) =>
+  PUT: async (url: string, body?: Record<string, unknown>) =>
     await _fetch({ url, options: createOptions({ method: "PUT", body }) }),
-  PATCH: async (url, body) =>
+  PATCH: async (url: string, body?: Record<string, unknown>) =>
     await _fetch({ url, options: createOptions({ method: "PATCH", body }) }),
-  DELETE: async (url, body) =>
+  DELETE: async (
+    url: string,
+    body: Record<string, unknown>,
+  ): Promise<unknown> =>
     await _fetch({ url, options: createOptions({ method: "DELETE", body }) }),
 };
 
-/**
- *
- * @param {object} params
- * @return {URLSearchParams}
- */
-export const createQuery = (params) => new URLSearchParams(params);
-
 class HTTPError extends Error {
-  constructor(status, statusText) {
+  constructor(
+    public status: number,
+    public statusText: string,
+  ) {
     super(`HTTP Error ${status}: ${statusText}`);
-    this.status = status;
-    this.statusText = statusText;
   }
 }

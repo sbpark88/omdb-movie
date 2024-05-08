@@ -1,4 +1,4 @@
-import { createRouter } from "../core/MyReact";
+import { createRouter } from "@core/MyReact";
 import Home from "./Home";
 import MovieDetails from "./MovieDetails";
 import About from "./About";

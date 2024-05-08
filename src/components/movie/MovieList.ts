@@ -1,6 +1,6 @@
-import { Component } from "../../core/MyReact";
-import movieStore from "../../store/movie";
-import MovieItem from "./MovieItem";
+import { Component } from "@core/MyReact";
+import movieStore from "@store/movie";
+import MovieItem from "@components/movie/MovieItem";
 import "./MovieList.scss";
 
 export default class MovieList extends Component {
@@ -21,9 +21,7 @@ export default class MovieList extends Component {
 
     const moviesEl = this.el.querySelector(".movies");
     moviesEl?.append(
-      ...movieStore.state.movies.map(
-        (movie) => new MovieItem({ props: movie }).el,
-      ),
+      ...movieStore.state.movies.map((movie) => new MovieItem(movie).el),
     );
   }
 }

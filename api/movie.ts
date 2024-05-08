@@ -1,7 +1,11 @@
-import { $fetch } from "../src/APIs/fetch";
+import { $fetch } from "../src/utils/fetch";
 import $K from "../src/constants";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(request, response) {
+export default async function handler(
+  request: VercelRequest,
+  response: VercelResponse,
+) {
   const { title, page } = request.query;
   const queries = {
     apiKey: process.env.OMDB_API_KEY,

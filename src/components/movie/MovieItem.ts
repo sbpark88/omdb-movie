@@ -1,10 +1,11 @@
-import { Component } from "../../core/MyReact";
+import { Component, Payload } from "@core/MyReact";
 import "./MovieItem.scss";
+import { Movie } from "@store/movie";
 
 export default class MovieItem extends Component {
-  constructor({ props }) {
+  constructor(movie: Movie) {
     const tagName = "a";
-    super({ tagName, props });
+    super({ tagName, props: movie as Record<string, any> });
   }
   render() {
     const { Poster, Title, Type, Year, imdbID } = this.props;
