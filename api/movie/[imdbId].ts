@@ -1,7 +1,11 @@
-import { $fetch } from "@utils/fetch";
-import $K from "src/constants";
+import { $fetch } from "../../src/utils/fetch";
+import $K from "../../src/constants";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(request: any, response: any) {
+export default async function handler(
+  request: VercelRequest,
+  response: VercelResponse,
+) {
   const { imdbId } = request.query;
   const queries = {
     apiKey: process.env.OMDB_API_KEY,
