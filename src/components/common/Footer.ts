@@ -1,5 +1,5 @@
-import { Component } from "../../core/MyReact";
-import aboutStore from "../../store/about";
+import { Component } from "@core/MyReact";
+import aboutStore from "@store/about";
 import "./Footer.scss";
 export default class Footer extends Component {
   constructor() {

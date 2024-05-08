@@ -1,6 +1,6 @@
-import { Component } from "./core/MyReact";
-import Header from "./components/common/Header";
-import Footer from "./components/common/Footer";
+import { Component } from "@core/MyReact";
+import Header from "@components/common/Header";
+import Footer from "@components/common/Footer";
 
 export default class App extends Component {
   render() {
