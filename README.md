@@ -119,7 +119,7 @@ brew install npm
    ```
 3. Run the script
    ```shell
-   npm run start
+   npm run vercel
    ```
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
